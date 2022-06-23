@@ -15,9 +15,8 @@ def tv_telegram_bot(request):
         Response object using `make_response`
         <https://flask.palletsprojects.com/en/1.1.x/api/#flask.make_response>.
     """
-    content_type = request.headers['content-type']
 
-    if request.method == 'POST' and content_type == 'text/plain':
+    if request.method == 'POST':
         telegrambot.sendMessage(request.data.decode('utf-8'))
         return 'done'
     else:
