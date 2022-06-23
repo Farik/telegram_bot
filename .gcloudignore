@@ -12,6 +12,7 @@
 # below:
 .git
 .gitignore
+.idea
 
 node_modules
 #!include:.gitignore
